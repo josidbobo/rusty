@@ -2,6 +2,8 @@ use std::{net::SocketAddr, path::Path};
 #[tokio::main]
 use bdk::{Wallet, bitcoin::Network, database::SqliteDatabase, SyncOptions, wallet::AddressIndex::New, blockchain::ElectrumBlockchain, electrum_client::Client};
 use super::read_env::env_settings;
+use axum::{response::Html, Router};
+
 
 pub fn wallet_implementation() -> anyhow::Result<()>{
     let my_path = Path::new("paypaul.db");
@@ -23,7 +25,7 @@ pub fn wallet_implementation() -> anyhow::Result<()>{
     println!("Listening on {}", addr);
 
     axum::Server::bind(&addr).serve(app.into_make_service()).await.unwrap();
-    wallet.sync(&blockchain, SyncOptions::default())?;
+    //wallet.sync(&blockchain, SyncOptions::default())?;
 
     Ok(())
 
