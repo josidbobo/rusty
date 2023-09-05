@@ -6,7 +6,7 @@ use super::{read_env::env_settings, structs_impl::{AddressResponse, AppError}};
 
 #[tokio::main]
 pub async fn wallet_implementation() -> anyhow::Result<()> {
-    let my_path = Path::new("paypaul.db");
+    let my_path = Path::new("maazi.db");
 
     let descriptor = env_settings()?;
     let wallet = Wallet::new(
