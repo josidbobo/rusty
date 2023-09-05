@@ -1,2 +1,3 @@
-## Bitc wallet 
-This is a bitcoin wallet implementation using bdk, Tokio and axum.
+### Blockchain wallet
+
+This is a bitcoin wallet implementation using bitcoin development kit for Rust, Tokio and axum.
