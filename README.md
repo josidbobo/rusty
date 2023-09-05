@@ -1,2 +1,2 @@
-### Bitcoin wallet 
-This is a bitcoin wallet implementation using bdk and Tokio
+## Bitc wallet 
+This is a bitcoin wallet implementation using bdk, Tokio and axum.
